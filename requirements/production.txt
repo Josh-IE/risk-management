@@ -1,0 +1,8 @@
+dj-database-url==0.5.0
+Django==2.2
+django-cors-headers==2.5.3
+django-rest-swagger==2.2.0
+djangorestframework==3.9.0
+django-s3-storage==0.12.4
+psycopg2-binary>=2.7.4
+zappa==0.48.2

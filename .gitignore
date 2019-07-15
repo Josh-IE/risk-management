@@ -1,0 +1,26 @@
+### Django ###
+.env
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+media
+static
+!web-app/static/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

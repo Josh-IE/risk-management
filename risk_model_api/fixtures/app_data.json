@@ -1,0 +1,396 @@
+[{
+    "model": "risk_model_api.client",
+    "pk": 1,
+    "fields": {
+      "name": "Client 1"
+    }
+  },
+  {
+    "model": "risk_model_api.riskmodel",
+    "pk": 1,
+    "fields": {
+      "client": 1,
+      "name": "Vehicle Insurance",
+      "description": "This form collects information about your Vehicle. Please provide the information to the best of your knowledge.",
+      "success_msg": "Thanks for your submission. You will be contacted by a representative.",
+      "button": "Save",
+      "activated": true,
+      "created_on": "2019-06-26T10:05:22.386Z",
+      "updated_on": "2019-06-26T11:49:28.390Z"
+    }
+  },
+  {
+    "model": "risk_model_api.fieldname",
+    "pk": 1,
+    "fields": {
+      "name": "Full Name",
+      "slug": "full-name",
+      "field_type": "text",
+      "default": "John Doe",
+      "regex_pattern": null,
+      "min_length": 5,
+      "max_length": 100,
+      "choices": null,
+      "risk_model": 1,
+      "required": true,
+      "help_text": "Provide the registered name of the vehicle",
+      "order": 1,
+      "unique": false,
+      "deleted": false,
+      "created_on": "2019-06-26T10:05:23.543Z",
+      "updated_on": "2019-06-26T11:49:28.969Z"
+    }
+  },
+  {
+    "model": "risk_model_api.fieldname",
+    "pk": 2,
+    "fields": {
+      "name": "Email Address",
+      "slug": "email-address",
+      "field_type": "email",
+      "default": "john.doe@brite.core",
+      "regex_pattern": null,
+      "min_length": 6,
+      "max_length": null,
+      "choices": null,
+      "risk_model": 1,
+      "required": true,
+      "help_text": null,
+      "order": 2,
+      "unique": true,
+      "deleted": false,
+      "created_on": "2019-06-26T10:13:52.536Z",
+      "updated_on": "2019-06-26T11:49:29.065Z"
+    }
+  },
+  {
+    "model": "risk_model_api.fieldname",
+    "pk": 3,
+    "fields": {
+      "name": "Purchased in New Condition",
+      "slug": "purchase-condition",
+      "field_type": "checkbox",
+      "default": null,
+      "regex_pattern": null,
+      "min_length": null,
+      "max_length": null,
+      "choices": null,
+      "risk_model": 1,
+      "required": true,
+      "help_text": "Was the vehicle purchased in new condition?",
+      "order": 3,
+      "unique": false,
+      "deleted": false,
+      "created_on": "2019-06-26T10:14:14.702Z",
+      "updated_on": "2019-06-26T11:49:29.188Z"
+    }
+  },
+  {
+    "model": "risk_model_api.fieldname",
+    "pk": 4,
+    "fields": {
+      "name": "Date of Purchase",
+      "slug": "date-of-purchase",
+      "field_type": "date",
+      "default": "2019-07-02",
+      "regex_pattern": null,
+      "min_length": null,
+      "max_length": null,
+      "choices": null,
+      "risk_model": 1,
+      "required": true,
+      "help_text": null,
+      "order": 4,
+      "unique": false,
+      "deleted": false,
+      "created_on": "2019-06-26T10:19:34.308Z",
+      "updated_on": "2019-06-26T11:49:29.217Z"
+    }
+  },
+  {
+    "model": "risk_model_api.fieldname",
+    "pk": 5,
+    "fields": {
+      "name": "Purchase Amount",
+      "slug": "purchase-amount",
+      "field_type": "float",
+      "default": 10.25,
+      "regex_pattern": null,
+      "min_length": null,
+      "max_length": null,
+      "choices": null,
+      "risk_model": 1,
+      "required": true,
+      "help_text": null,
+      "order": 5,
+      "unique": false,
+      "deleted": false,
+      "created_on": "2019-06-26T10:21:57.140Z",
+      "updated_on": "2019-06-26T11:49:29.226Z"
+    }
+  },
+  {
+    "model": "risk_model_api.fieldname",
+    "pk": 6,
+    "fields": {
+      "name": "Estimated Current Worth",
+      "slug": "estimated-current-worth",
+      "field_type": "number",
+      "default": 1000,
+      "regex_pattern": null,
+      "min_length": null,
+      "max_length": null,
+      "choices": null,
+      "risk_model": 1,
+      "required": true,
+      "help_text": "Estimated current worth of the vehicle",
+      "order": 6,
+      "unique": false,
+      "deleted": false,
+      "created_on": "2019-06-26T10:22:51.183Z",
+      "updated_on": "2019-06-26T11:49:29.275Z"
+    }
+  },
+  {
+    "model": "risk_model_api.fieldname",
+    "pk": 7,
+    "fields": {
+      "name": "Features/Attributes",
+      "slug": "featuresattributes",
+      "field_type": "array",
+      "default": null,
+      "regex_pattern": null,
+      "min_length": null,
+      "max_length": null,
+      "choices": null,
+      "risk_model": 1,
+      "required": false,
+      "help_text": "Provide other vehicle attributes. e.g v6, 4wd, black, tinted, honda. Use return key.",
+      "order": 8,
+      "unique": false,
+      "deleted": false,
+      "created_on": "2019-06-26T10:27:20.178Z",
+      "updated_on": "2019-06-26T11:49:29.675Z"
+    }
+  },
+  {
+    "model": "risk_model_api.fieldname",
+    "pk": 8,
+    "fields": {
+      "name": "Vehicle Type",
+      "slug": "vehicle-type",
+      "field_type": "select",
+      "default": "SUV",
+      "regex_pattern": null,
+      "min_length": null,
+      "max_length": null,
+      "choices": "[\"Sedan\", \"SUV\", \"Truck\", \"Minivan\"]",
+      "risk_model": 1,
+      "required": true,
+      "help_text": null,
+      "order": 7,
+      "unique": false,
+      "deleted": false,
+      "created_on": "2019-06-26T10:29:52.289Z",
+      "updated_on": "2019-06-26T11:49:29.432Z"
+    }
+  },
+  {
+    "model": "risk_model_api.fieldname",
+    "pk": 9,
+    "fields": {
+      "name": "Vehicle Mileage",
+      "slug": "vehicle-mileage",
+      "field_type": "radio",
+      "default": "50001-100000",
+      "regex_pattern": null,
+      "min_length": null,
+      "max_length": null,
+      "choices": "[\"0 - 50000\", \"50001-100000\", \"100001-200000\", \"200001 and beyond\"]",
+      "risk_model": 1,
+      "required": true,
+      "help_text": null,
+      "order": 9,
+      "unique": false,
+      "deleted": false,
+      "created_on": "2019-06-26T10:36:38.486Z",
+      "updated_on": "2019-06-26T11:49:29.704Z"
+    }
+  },
+  {
+    "model": "risk_model_api.fieldname",
+    "pk": 10,
+    "fields": {
+      "name": "Proof of Ownership",
+      "slug": "proof-of-ownership",
+      "field_type": "file",
+      "default": null,
+      "regex_pattern": null,
+      "min_length": null,
+      "max_length": null,
+      "choices": null,
+      "risk_model": 1,
+      "required": true,
+      "help_text": "Document providing proof of vehicle ownership",
+      "order": 10,
+      "unique": false,
+      "deleted": false,
+      "created_on": "2019-06-26T10:41:30.425Z",
+      "updated_on": "2019-06-26T11:49:29.738Z"
+    }
+  },
+  {
+    "model": "risk_model_api.fieldname",
+    "pk": 11,
+    "fields": {
+      "name": "Vehicle Identification Number",
+      "slug": "vehicle-identification-number",
+      "field_type": "regex",
+      "default": "BRC_brz12345",
+      "regex_pattern": "^BRC_[a-z0-9_-]{6,10}$",
+      "min_length": null,
+      "max_length": null,
+      "choices": null,
+      "risk_model": 1,
+      "required": true,
+      "help_text": "Vehicle vin",
+      "order": 11,
+      "unique": true,
+      "deleted": false,
+      "created_on": "2019-06-26T10:50:11.051Z",
+      "updated_on": "2019-06-26T11:49:29.791Z"
+    }
+  },
+  {
+    "model": "risk_model_api.fieldname",
+    "pk": 12,
+    "fields": {
+      "name": "Form Submit Authorization Code",
+      "slug": "form-submit-authorization-code",
+      "field_type": "password",
+      "default": 123456,
+      "regex_pattern": null,
+      "min_length": 6,
+      "max_length": 6,
+      "choices": null,
+      "risk_model": 1,
+      "required": true,
+      "help_text": "Enter the code earlier sent to your mail.",
+      "order": 12,
+      "unique": true,
+      "deleted": false,
+      "created_on": "2019-06-26T10:53:47.257Z",
+      "updated_on": "2019-06-26T11:49:29.908Z"
+    }
+  },
+  {
+    "model": "risk_model_api.fieldname",
+    "pk": 13,
+    "fields": {
+      "name": "Request A Call",
+      "slug": "request-a-call",
+      "field_type": "switch",
+      "default": null,
+      "regex_pattern": null,
+      "min_length": null,
+      "max_length": null,
+      "choices": null,
+      "risk_model": 1,
+      "required": true,
+      "help_text": "Do you want a call from our representative.",
+      "order": 13,
+      "unique": false,
+      "deleted": false,
+      "created_on": "2019-06-26T10:55:01.219Z",
+      "updated_on": "2019-06-26T11:49:29.990Z"
+    }
+  },
+  {
+    "model": "risk_model_api.fieldname",
+    "pk": 14,
+    "fields": {
+      "name": "Available Inspection Hours",
+      "slug": "available-contact-hours",
+      "field_type": "multiselect",
+      "default": null,
+      "regex_pattern": null,
+      "min_length": null,
+      "max_length": null,
+      "choices": "[\"09:00 - 11:59\", \"12:00 - 02:59\", \"03:00 - 05:59\"]",
+      "risk_model": 1,
+      "required": false,
+      "help_text": "Select the hours you are available for an inspection visit.",
+      "order": 14,
+      "unique": false,
+      "deleted": false,
+      "created_on": "2019-06-26T10:59:09.705Z",
+      "updated_on": "2019-06-26T11:49:30.010Z"
+    }
+  },
+  {
+    "model": "risk_model_api.fieldname",
+    "pk": 15,
+    "fields": {
+      "name": "LinkedIn URL",
+      "slug": "linkedin-url",
+      "field_type": "url",
+      "default": "http://www.linkedin.com/in/john.doe",
+      "regex_pattern": null,
+      "min_length": null,
+      "max_length": null,
+      "choices": null,
+      "risk_model": 1,
+      "required": false,
+      "help_text": "Help us know more about you.",
+      "order": 15,
+      "unique": true,
+      "deleted": false,
+      "created_on": "2019-06-26T11:01:06.657Z",
+      "updated_on": "2019-06-26T11:49:30.021Z"
+    }
+  },
+  {
+    "model": "risk_model_api.fieldname",
+    "pk": 16,
+    "fields": {
+      "name": "Notes/Comments",
+      "slug": "notescomments",
+      "field_type": "text",
+      "default": "I love my ride.",
+      "regex_pattern": null,
+      "min_length": null,
+      "max_length": 255,
+      "choices": null,
+      "risk_model": 1,
+      "required": true,
+      "help_text": "Provide information you think may be of help to us.",
+      "order": 16,
+      "unique": false,
+      "deleted": false,
+      "created_on": "2019-06-26T11:06:23.833Z",
+      "updated_on": "2019-06-26T11:49:30.081Z"
+    }
+  },
+  {
+    "model": "risk_model_api.fieldname",
+    "pk": 17,
+    "fields": {
+      "name": "Contact Time",
+      "slug": "contact-time",
+      "field_type": "time",
+      "default": "12:00:00",
+      "regex_pattern": null,
+      "min_length": null,
+      "max_length": null,
+      "choices": null,
+      "risk_model": 1,
+      "required": false,
+      "help_text": "When is the Best time to call.",
+      "order": 17,
+      "unique": false,
+      "deleted": false,
+      "created_on": "2019-06-26T11:15:34.635Z",
+      "updated_on": "2019-06-26T11:49:30.001Z"
+    }
+  }
+]

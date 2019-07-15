@@ -1,0 +1,7 @@
+[run]
+branch = true
+omit = */tests/*, */migrations/*, */urls.py, *config/*, */wsgi.py, manage.py, quiz.py
+source = .
+
+[report]
+show_missing = true

@@ -1,0 +1,11 @@
+{
+    "dev": {
+        "django_settings": "config.settings.prod",
+        "exclude": ["node_modules", "ve", "*.gz", "*.rar"],
+        "profile_name": "zappa",
+        "project_name": "risk-mgt",
+        "remote_env": "s3://{bucket-name}/{filename}.json",
+        "runtime": "python3.6",
+        "s3_bucket": "zappa-2yz5pebqd"
+    }
+}
